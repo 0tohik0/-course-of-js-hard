@@ -1,11 +1,11 @@
-let num = "266219";
-let mas = 1;
+let num = 266219;
+let arr = 1;
 
-num.toString().split('').forEach(elem => mas *= elem);
+num.toString().split('').forEach(elem => arr *= elem); //в строку из числа, разбиваем на массив и перемножаем
 
-let stn = mas ** 3;
+let stn = arr ** 3; //массив в 3 степени
 
-console.log('mas: ', mas); 
+console.log('array: ', arr); 
 
 console.log(stn);
-console.log(stn.toString().substring(0,2));
+console.log(stn.toString().substring(2,0));
