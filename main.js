@@ -1,11 +1,22 @@
-let num = 266219;
-let arr = 1;
+'use strict';
 
-num.toString().split('').forEach(elem => arr *= elem); //в строку из числа, разбиваем на массив и перемножаем
+let arr = ['432', '2364', '64', '543', '276', '449'];
 
-let stn = arr ** 3; //массив в 3 степени
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i].startsWith('2') || arr[i].startsWith('4')) {
+    console.log(arr[i]);
+  } else {
+      console.log('Нет совпадений');
+  }
+}
 
-console.log('array: ', arr); 
 
-console.log(stn);
-console.log(stn.toString().substring(2,0));
+newPrime:
+for (let a = 2; a <= 100; a++) {
+
+  for (let b = 2; b < a; b++) {
+    if (a % b == 0) continue newPrime;
+  }
+
+  console.log(a + ' - ' + "Делители этого числа: 1 и" , a)
+}
